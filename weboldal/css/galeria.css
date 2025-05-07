@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #373737;
+  }
+
+  nav {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #fad932;
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #fad932;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0.5rem 0;
+    }
+  }
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 20px; /* Space between images */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures images don't overflow their container */
+    border-radius: 10px;
+    background-color: none; /* Optional: Add a background color for better contrast */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* Ensure consistent height */
+  object-fit: contain; /* Ensure the entire image fits within the box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Add pointer cursor on hover */
+  z-index: 1; /* Ensure the image is above other elements */
+  pointer-events: auto; /* Ensure the image is clickable */
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: auto; /* Allow interactions */
+}
+
+#lightbox img {
+  pointer-events: auto; /* Ensure the image is clickable */
+  width: 80vw; /* Make the image fill 80% of the viewport width */
+  height: 80vh; /* Make the image fill 80% of the viewport height */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  border-radius: 10px;
+}
+
+#lightbox button {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#lightbox button:nth-child(2) { /* Next button */
+    right: 20px; /* Move to the right edge */
+}
+
+#lightbox button:nth-child(3) { /* Back button */
+    left: 20px; /* Move to the left edge */
+}
