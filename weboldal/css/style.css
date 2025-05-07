@@ -391,11 +391,11 @@ a:focus {
 
 .slider_section .detail-box a {
   display: inline-block;
-  background: #fad932;
+  background: #0f1b2c;
   color: #000000;
   padding: 10px 25px;
   border-radius: 30px;
-  border: 1px solid #fad932;
+  border: 1px solid #0f1b2c;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-transform: uppercase;
@@ -404,7 +404,7 @@ a:focus {
 
 .slider_section .detail-box a:hover {
   background: transparent;
-  color: #fad932;
+  color: #0f1b2c;
 }
 
 .slider_section .img-box {
@@ -511,7 +511,7 @@ a:focus {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 100%;
-  background-color: #fad932;
+  background-color: #0f1b2c;
   -webkit-transition: all .3s;
   transition: all .3s;
   z-index: 2;
@@ -541,7 +541,7 @@ a:focus {
 }
 
 .about_section .img-box .play_btn {
-  background: #fad932;
+  background: #0f1b2c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
