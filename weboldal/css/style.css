@@ -467,7 +467,7 @@ a:focus {
 
 .slider_section .carousel_btn-container .carousel-control-prev:hover,
 .slider_section .carousel_btn-container .carousel-control-next:hover {
-  background-color: #fad932;
+  background-color: #0f1b2c;
   border-color: transparent;
 }
 
@@ -920,7 +920,7 @@ a:focus {
 
 .client_section .carousel-control-prev:hover,
 .client_section .carousel-control-next:hover {
-  background-color: #fad932;
+  background-color: #0f1b2c;
 }
 
 .client_section .carousel-control-prev {
@@ -1179,7 +1179,7 @@ a:focus {
 }
 .input-group input:focus + label,.input-group input:not(:placeholder-shown) + label {
   top: 5%;
-  color: #fad932;
+  color: #0f1b2c;
   font-size: .8rem;
 
 }
@@ -1193,14 +1193,14 @@ a:focus {
   bottom:0;
   height: .1rem;
   width: 100%;
-  background-color: #fad932;
+  background-color: #0f1b2c;
   transform: scaleX(0);
   transition: .3s ease-in-out;
   transform-origin: left;
 }
 .input-group.type-md input:focus ~ .border{
   transform: scaleX(1);
-  background-color: #fad932;
+  background-color: #0f1b2c;
 }
 .input-button {
   background-color: white; /* Set initial background color to white */
@@ -1216,7 +1216,7 @@ a:focus {
 }
 
 .input-button:hover {
-  background-color: #fad932; /* Change background color on hover to #fad932 */
+  background-color: #0f1b2c; /* Change background color on hover to #0f1b2c */
 }
 .gerilogo{
   margin: auto;
