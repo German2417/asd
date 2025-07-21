@@ -1,17 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap");
-@font-face {
-  font-family: "Andale Mono";
-  src: url(../fonts/AndaleMono.ttf);
-}
-html {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   color: #ffffff;
   background-color: #373737;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 280;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
 .layout_margin {
@@ -61,6 +64,18 @@ body {
 
 .heading_container h2 {
   font-weight: bold;
+}
+
+.heading_container h2.masodikszint {
+  font-size: 28px;
+  color: #ec6434;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .heading_container a {
@@ -380,10 +395,7 @@ a:focus {
   margin-top: 75px;
 }
 
-.slider_section .detail-box h1 {
-  font-size: 3rem;
-  font-family: "Andale Mono";
-}
+
 
 .slider_section .detail-box p {
   margin-top: 15px;
@@ -738,6 +750,14 @@ a:focus {
   width: 100%;
 }
 
+/* Uniform height for gallery_section images */
+.gallery_section .img-box img {
+  height: 220px !important;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
 .gallery_section .gallery_container .box .img-box h5 {
   color: #373737;
   position: absolute;
@@ -944,7 +964,7 @@ a:focus {
 /* info section */
 .info_section {
   position: relative;
-  margin-top: -125px;
+  margin-top: 0;
 }
 
 .info_section .heading_container {
@@ -1122,12 +1142,36 @@ a:focus {
 
 .heading_container h2 {
   font-size: 28px;
-  color: #333;
+  color: #e72361;
+
 }
 
+.heading_container h2.masodikszint {
+  font-size: 52px;
+  color: #ec6434;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 80px;
+  margin-top: -30px;
+}
+.heading_container h2.harmadikszint {
+  font-size: 28px;
+  color: #2c8ac8;
+  text-align: center;
+}
+
+.navkep {
+  width: 100%;
+  height: auto;
+}
 .heading_container p {
   font-size: 16px;
-  color: #777;
+  color: #ffffff;
 }
 .form_color{
   color: #777
@@ -1225,4 +1269,300 @@ a:focus {
   padding: 5px;
   height: 46rem;
   float: right;
+}
+
+.noto-sans-Condensed-Bold {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: bold;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* Service box styling */
+.service-box {
+  background: #232323;
+  border-radius: 18px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  height: 100%;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.service-box .img-box {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto 1rem auto;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #191919;
+}
+
+.service-box .img-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
+
+.service-yellow { color: #eeca1c; }
+.service-green { color: #c0ce39; }
+.service-blue { color: #21b4c6; }
+
+/* Responsive grid for service boxes */
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 3 in a row on large screens */
+@media (min-width: 992px) {
+  .service-col {
+    flex: 0 0 32%;
+    max-width: 32%;
+  }
+  .slider_section .detail-box a {
+    width: 55%;
+  }
+
+}
+
+/* 2 in a row on medium screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .service-col {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+
+/* 1 in a row on small screens */
+@media (max-width: 767.98px) {
+  .services-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Remove default ul/li styles in service boxes */
+.service-box ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.service-box li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+/* Hover effect for gallery images */
+.gallery_section .img-box img {
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  cursor: pointer;
+}
+.gallery_section .img-box img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 24px rgba(44,138,200,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+
+/* --- Begin CSS extracted from index.html --- */
+.info_section .heading_container p.noto-sans-Condensed-Bold {
+  color: #e72361;
+  font-size: 26.5px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+}
+.about-image-box img.img-fluid.rounded.shadow {
+  max-width: 100%;
+  height: auto;
+}
+.gallery_section .img-box {
+  background: none !important;
+}
+.service-box .img-box {
+  background: none !important;
+}
+.gallery_section .img-box img,
+.service-box .img-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  .about-image-box img.img-fluid.rounded.shadow {
+    margin-top: 2rem;
+  }
+}
+/* --- End CSS extracted from index.html --- */
+
+/* Explicitly ensure background is none for gallery/service img-boxes */
+.gallery_section .img-box,
+.service-box .img-box {
+  background: none !important;
+}
+
+/* Responsive images */
+img,
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive about section image box */
+.about-image-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Responsive service box */
+.service-box {
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive text alignment for headings */
+.heading_container h2,
+.heading_container h2.masodikszint,
+.heading_container h2.harmadikszint {
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Responsive font sizes for headings */
+@media (max-width: 991.98px) {
+  .heading_container h2.masodikszint {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+  .about-image-box {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .heading_container h2.masodikszint {
+    font-size: 1.5rem;
+  }
+  .about_section .row {
+    flex-direction: column-reverse !important;
+  }
+  .about-image-box {
+    margin-bottom: 1.5rem;
+  }
+  .service-box {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .heading_container h2.masodikszint {
+    font-size: 1.2rem;
+  }
+  .about-image-box {
+    max-width: 100%;
+  }
+}
+
+/* Responsive padding for sections */
+@media (max-width: 991.98px) {
+  .layout_padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .layout_padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* Responsive gallery images */
+.gallery_section .img-box img,
+.service-box .img-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* Responsive service box grid */
+@media (max-width: 991.98px) {
+  .service-box .img-box {
+    max-width: 100%;
+  }
+}
+.promo-banner {
+  background: #FF0000;
+  color: #fff;
+  font-size: 52px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 18px;
+  padding: 16px 24px 20px 24px;
+  margin: 60px auto 10px auto;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  line-height: 1.2;
+}
+@media (max-width: 991.98px) {
+  .promo-banner {
+    font-size: 2rem;
+    padding: 8px 10px 12px 10px;
+    min-height: 72px;
+    border-radius: 12px;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 575.98px) {
+  .promo-banner {
+    font-size: 1.1rem;
+    padding: 4px 4vw 8px 4vw;
+    min-height: 38px;
+    border-radius: 8px;
+    max-width: 99vw;
+    word-break: break-word;
+  }
 }
