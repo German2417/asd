@@ -1021,8 +1021,12 @@ a:focus {
 }
 
 .info_section ul li {
-  list-style-type: none;
+  list-style-type: disc;
   margin: 3px 0;
+}
+li{
+  list-style-type:disc;
+  margin-left: 1.3rem
 }
 
 .info_section ul li a {
